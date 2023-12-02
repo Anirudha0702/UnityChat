@@ -1,0 +1,108 @@
+.messages-box{
+    height: 100svh;
+    flex-grow: 1;
+    position: relative;
+}
+.message-nav{
+    position: relative;
+    height: 3rem;
+    background-color: rgba(0, 119, 255, 1);
+    box-shadow: 0 0 5px rgb(0, 0, 0);
+}
+.logo-wrapper{
+    position: relative;
+    width:5rem;
+    height: 100%;
+}
+.logo{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: hue-rotate(50deg);
+}
+.message-body{
+    color: #000;
+}
+.message-wrapper{
+    position: relative;
+    height: calc(100svh - 5.5rem);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.sending-options{
+   position: relative;
+   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    padding-inline:0.5rem ;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+}
+.emoji-icon,
+.send-icon{
+    scale: 2;
+    color:rgba(0, 119, 255, 1);
+}
+.msg-send{
+    width:80%;
+    position: relative;
+    flex-shrink: 1;
+    flex-grow: 1;
+    height: 100%;
+    border: none;
+}
+.msg-send:focus{
+    outline: none;
+    border-bottom: 1px solid rgba(0, 119, 255, 1);
+}
+.reply{
+    position: absolute;
+    background-color: rgb(221, 219, 219);
+    height: 5rem;
+    width: 100%;
+    overflow: hidden;
+    padding-inline: 0.5rem;
+    top:-5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.name{
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.2rem;
+
+}
+.reply-name{
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+.reply-text{
+    position: relative;
+    width: 80%;
+    height: 4.5rem;
+    padding: 0.3rem 1rem;
+    border-left: 2px solid rgba(0, 0, 0, 0.5);
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    color: #858585;
+}
+.cross{
+    scale: 2.5;
+    color:#7e7b7b;
+    transform: translateX(-0.7rem);
+}

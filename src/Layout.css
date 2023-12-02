@@ -1,0 +1,6 @@
+.wrapper{
+    display: flex;
+}
+.wrapper:nth-child(1){
+    background-color: red;
+}

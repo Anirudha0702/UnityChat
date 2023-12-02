@@ -1,0 +1,54 @@
+
+.text-wrapper{
+    position: relative;
+    display: flex;
+    transition: all 0.2s ease;
+    
+}.text{
+    width:15rem;
+    background-color: rgba(0, 119, 255, 1);
+    border-radius: 10px;
+    padding: 0.5rem;
+    user-select: none;
+    color:#fff;
+}
+.name{
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+.options{
+    position: absolute;
+    padding: 0.5rem 0.2rem;
+    right:3rem;
+    top: -8rem;
+    width: 4rem;
+    height: 8rem;
+    background-color: rgb(228, 228, 228);
+}
+.options .chat-option{
+    margin-bottom: 0.3rem;
+    padding: 0.2rem;
+    cursor: pointer;
+}
+.drop-down{
+    scale: 2;
+    display: none;
+    cursor: pointer;
+}
+.name:hover .drop-down{
+    display: block;
+}
+.img-wrapper{
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: blue;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
