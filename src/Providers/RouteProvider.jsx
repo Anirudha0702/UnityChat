@@ -4,10 +4,7 @@ import Login from "../Pages/Login/Login"
 import { Auth } from "./AuthProvider"
 import Home from "../Pages/Home/Home"
 import Chats from "../Pages/Chats/Chats"
-
-
-
-
+import Search from "../Pages/Search/Search"
 
 const RouteProvider = ({children}) => {
   const {currentUser}=useContext(Auth)
@@ -24,6 +21,10 @@ const RouteProvider = ({children}) => {
         {
           path: "/globalChat",
           element: currentUser ? <Chats/> : <Login/>,
+        },
+        {
+          path: "/search",
+          element: <Search/>,
         }
     ]
 )

@@ -29,11 +29,13 @@
 .message-wrapper{
     position: relative;
     height: calc(100svh - 5.5rem);
+    width: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    padding-top: 0.5rem;
 }
 .sending-options{
    position: relative;

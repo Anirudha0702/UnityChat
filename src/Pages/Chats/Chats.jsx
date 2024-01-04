@@ -10,7 +10,7 @@ const Chats = () => {
     <div className="chats" style={{display:'flex'}}>
       <Nav/>
       {
-        clientwidth > 550 && <UserInfo uid={currentUser?.uid}/> 
+        clientwidth > 650 && <UserInfo uid={currentUser?.uid}/> 
       }
       <Messages/>
     </div>
