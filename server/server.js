@@ -4,6 +4,7 @@ import dotenv from "dotenv"
 import cors from "cors"
 
 import UserRouter from "./routes/user.routes.js"
+import StatusRouter from "./routes/status.routes.js"
 // import authRouter from "./routes/auth.routes.js"
 const app = express()
 dotenv.config()
@@ -32,6 +33,7 @@ const connectDb = async() =>{
 // app.use('/api/auth',authRouter)
 console.log("HIt server")
 app.use("/api/users",UserRouter)
+app.use("/api/status",StatusRouter)
 app.get("/",(req,res) => {
     res.send("The server is running")
 })
