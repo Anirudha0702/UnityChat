@@ -1,0 +1,14 @@
+.chat{
+  width:20rem;
+  background-color: red;
+  margin-bottom: 0.5rem;
+}
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+

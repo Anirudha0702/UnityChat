@@ -1,0 +1,33 @@
+.welcome{
+    height: 100svh;
+    flex-grow: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.welcome img{
+    width:20rem;
+}
+.welcome p{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.welcome span{
+    font-size: 2rem;
+    font-weight: 600;
+    color: rgba(0, 119, 255, 1);
+}
+.welcome button{
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(0, 119, 255, 1);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: all 0.3s ease-in-out;
+}

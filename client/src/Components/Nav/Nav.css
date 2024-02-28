@@ -1,0 +1,59 @@
+.navbar{
+    padding-top: 1rem;
+    position:relative;
+    z-index: 1;
+    height: 100svh;
+    background-color: rgb(0, 119, 255);
+    transition: all 0.3s ease-in-out;
+}
+/* .navbar:hover{
+    width: 3rem;
+    opacity: 1;
+} */
+.navbar .nav-option-wrapper{
+    position: relative;
+}
+.navbar .nav-option-wrapper .option{
+    position: relative;
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar .nav-option-wrapper .option:hover{
+    background-color: #ffffff;
+}
+.navbar .nav-option-wrapper .option:hover .icon{
+    color: rgb(0, 119, 255);
+}
+.option.active{
+    background-color: #ffffff;
+}
+.option.active .icon{
+    color: rgb(0, 119, 255);
+}
+.icon{
+    color: #fff;
+    scale: 1.5;
+}
+@media screen and (max-width: 250px) {
+    .navbar{
+        bottom: 0;
+        z-index: 1;
+        width: 100%;
+        height: 3rem;
+        opacity: 1;
+    }
+    .nav-option-wrapper{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+}
