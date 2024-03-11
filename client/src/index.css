@@ -50,7 +50,17 @@ a,
 area {
   outline: none;
 }
-
+input{
+  outline: none;
+border: none;
+}
+input:focus,
+input:focus-visible
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,

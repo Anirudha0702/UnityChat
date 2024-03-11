@@ -11,7 +11,7 @@ const _getDoc=async (collection,docId)=>{
         
     } catch (error) {
         console.log(error)
-        return error
+        throw new Error(error)
     }
 };
 export default _getDoc;

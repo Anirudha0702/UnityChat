@@ -2,7 +2,7 @@ import Status from '../models/Status.model.js';
 export const getStatusOfUser = async (req, res) => {
     try {
         const { uid } = req.query;
-        const status = await Status.find({ uid: uid });
+        const status = await Status.find({ uid: uid }).sort({"createdAt": -1});
         res.status(200).json(status);
     }
     catch (error) {

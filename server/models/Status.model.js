@@ -33,7 +33,6 @@ const statusSchema = new Schema({
     uid:{
         type:String,
         required:true,
-        unique:true
     },
     displayName : {
         type: String,
