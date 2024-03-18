@@ -1,4 +1,4 @@
-import Nav from "../../Components/Nav/Nav"
+import Messages from '../../Components/Messages/Messages'
 import './Home.css'
 import { useContext } from "react"
 import { Auth } from "../../Providers/AuthProvider"
@@ -8,9 +8,13 @@ const Home = () => {
   const {currentUser}=useContext(Auth)
   const isSmallScreen=useContext(ScreenWidthContext)
   return (
-    <div className="home" style={{display:'flex'}}>
-      <UserInfo />
-      
+    <div className="" style={{display:'flex'}}>
+      <UserInfo uid={currentUser?.uid}/> 
+      {
+        !isSmallScreen && <Messages/>
+      }
+      {/* <Messages/> */}
+
     </div>
   )
 }

@@ -5,7 +5,7 @@ const ScreenWidthProvider = ({ children }) => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 720);
+      setIsSmallScreen(window.innerWidth < 640);
     };
     handleResize();
     window.addEventListener('resize', handleResize);
