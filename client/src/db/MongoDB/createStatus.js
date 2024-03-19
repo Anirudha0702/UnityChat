@@ -9,6 +9,7 @@ const createStatus = async (
   video = null,
   _uid,
   displayName,
+  photoURL,
   visibleTo
 ) => {
   const sid = uid();
@@ -22,6 +23,7 @@ const createStatus = async (
     video,
     uid:_uid,
     displayName,
+    photoURL,
     seenBy:[],
     visibleTo,
   };

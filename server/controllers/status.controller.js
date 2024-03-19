@@ -12,8 +12,8 @@ export const getStatusOfUser = async (req, res) => {
 };
 export const createStatus = async (req, res) => {
     try {
-        const { uid, displayName, sid, isVideo, isImage, isText, text, image, video, visibleTo } = req.body;
-        const status = new Status({ uid, displayName, sid, isVideo, isImage, isText, text, image, video, visibleTo });
+        const { uid, displayName, sid, isVideo, isImage, isText, text, image, video, visibleTo ,photoURL} = req.body;
+        const status = new Status({ uid, displayName, sid, isVideo, isImage, isText, text, image, video, visibleTo ,photoURL});
         await status.save();
         res.status(201).json(status);
     }
@@ -34,11 +34,15 @@ export const deleteStatus= async (req, res) => {
     }
 };
 
-export const getStatusOfFollowings = async (req, res) => {
+export const getStatusVisibleTo = async (req, res) => {
     try {
-        const { uid } = req.query;
-        const status = await Status.find({ uid: { $in: visibleTo } });
-        res.status(200).json(status);
+        const { uid } = req.params;
+        const status = await Status.find({ visibleTo: { $in: [uid]}}).sort({"createdAt": -1});
+        const result=status.reduce((x, y) => {
+            (x[y.uid] = x[y.uid] || []).push(y);
+            return x;
+        }, {});
+        res.status(200).json(result);
     }
     catch (error) {
         console.log(error)

@@ -19,7 +19,7 @@ const CreateStatus = ({ callback, isText, doc, uid }) => {
     try {
       if (processing) return;
       setProcessing(true);
-      const { displayName, followers } = await _getDoc("Users", uid);
+      const { displayName, followers ,photoURL} = await _getDoc("Users", uid);
 
       const text = statusText.length > 0;
       let url;
@@ -39,6 +39,7 @@ const CreateStatus = ({ callback, isText, doc, uid }) => {
         isVideo ? url : null,
         uid,
         displayName,
+        photoURL,
         followers
       );
 
