@@ -1,7 +1,7 @@
 import axios from "axios";
 const FindUsers = async (key) => {
     try {
-        const res = await axios.get(`${import.meta.env.VITE_backendAPI}/api/users/find?key=${key}`);
+        const res = await axios.get(` ${import.meta.env.VITE_backendAPI}/api/users/find?key=${key}`);
         console.log(res)
         return res.data
     } catch (error) {

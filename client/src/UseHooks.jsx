@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import _getDoc from "./db/Firebase/getDoc";
-import FindUsers from "./db/MongoDB/findUSers";
+import FindUsers from "./db/MongoDB/findUsers";
 import GetStatusOfUser from "./db/MongoDB/GetStatusOfUser";
 import getStatusVisibleTo from "./db/MongoDB/getStatusVisibleTo";
 export const GetUser = (userId) => {
