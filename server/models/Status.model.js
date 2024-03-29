@@ -39,6 +39,10 @@ const statusSchema = new Schema({
         required : true,
         trim : true
     },
+    photoURL : {
+        type: String,
+        required : true,
+    },
     seenBy : {
         type: Array
     },

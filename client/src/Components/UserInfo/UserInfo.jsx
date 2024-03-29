@@ -155,10 +155,10 @@ const UserInfo = () => {
           className="absolute h-full w-full object-cover"
         />
         <div className="flex flex-col absolute z-10 bottom-0 right-1">
-          <Link>
+          <Link to="#">
             <PiChatsCircleFill size={40} color="white"/>
           </Link>
-          <Link>
+          <Link to ="/status">
             <RiHeartAddFill size={40} color="red"/>
           </Link>
         </div>
