@@ -1,5 +1,4 @@
 import {useState } from "react";
-import "./CreateStatus.css";
 import { createPortal } from "react-dom";
 import { MdOutlineCancel } from "react-icons/md";
 import { IoSend } from "react-icons/io5";

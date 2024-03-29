@@ -18,7 +18,7 @@ const signin=async()=>{
                         email,
                         photoURL,
                         coverURL:'https://w0.peakpx.com/wallpaper/1005/796/HD-wallpaper-one-piece-monkeydluffy-onepiece.jpg',
-                        about:'Busy',
+                        about:"Hi there! I'm new to this chat app and excited to connect with interesting people. I enjoy discussing a wide range of topics, from technology and science to art and literature.",
                         followers:[],
                         followersCount:0,
                         following:[],

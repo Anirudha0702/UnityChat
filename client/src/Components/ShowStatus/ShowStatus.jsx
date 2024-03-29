@@ -1,4 +1,4 @@
-import "./ShowStatus.css";
+
 import { MdOutlineCancel } from "react-icons/md";
 import { createPortal } from "react-dom";
 import { FaEye } from "react-icons/fa";
