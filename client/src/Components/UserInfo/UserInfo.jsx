@@ -56,14 +56,7 @@ const UserInfo = () => {
           alt=" cover image"
           className="absolute h-full w-full object-cover"
         />
-        <div className="flex flex-col absolute z-10 bottom-0 right-1">
-          <Link>
-            <PiChatsCircleFill size={40} color="white"/>
-          </Link>
-          <Link>
-            <RiHeartAddFill size={40} color="red"/>
-          </Link>
-        </div>
+        
       </div>
       <div className="-mt-12 pl-2 flex flex-wrap gap-2  items-end ">
         <div className="avatar ">
