@@ -1,13 +1,10 @@
 import { signInWithPopup } from "firebase/auth";
 import {auth,provider,db} from './firebase';
-
 import { Timestamp ,doc, getDoc,setDoc} from "firebase/firestore";
-import createUser from "../MongoDB/createUser";
 const signin=async()=>{
             try {
                 const res= await signInWithPopup(auth, provider);
                 const {email,photoURL,displayName,uid}=res.user;
-                console.log(email,photoURL,displayName,uid)
                 const docRef=doc(db,'Users',uid);
                 const _doc=await getDoc(docRef);
                 console.log(_doc.exists())
@@ -24,12 +21,7 @@ const signin=async()=>{
                         following:[],
                         memberSince:Timestamp.now(),
                     });
-                    await createUser({//mongoDB create user
-                        uid,
-                        displayName,
-                        email,
-                        photoURL
-                    })
+                
                 }
                 return {
                     isError:false,

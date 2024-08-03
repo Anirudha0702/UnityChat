@@ -88,77 +88,6 @@ const Text = ({
     });
   };
 
-  // return (
-  //   <>
-  //     {isNewDate && <span style={style}>{`${date} ${month} ${year}`}</span>}
-  //     <div
-  //       onTouchMove={(e) => {
-  //         handleTouchMove(e);
-  //       }}
-  //       onTouchEnd={(e) => {
-  //         handleTouchEnd(e);
-  //       }}
-  //       onTouchStart={(e) => {
-  //         handleTouchStart(e);
-  //       }}
-  //       className={`text-wrapper ${
-  //         senderId === currentUser?.uid
-  //           ? "text-wrapper-sender"
-  //           : "text-wrapper-receiver"
-  //       }`}
-  //       ref={chatRef}
-  //     >
-  //       <div
-  //         className="user-img-wrapper"
-  //         style={{
-  //           display: senderId === currentUser?.uid ? "none" : "",
-  //         }}
-  //       >
-  //         <img src={photoURL} alt="" referrerPolicy="no-referrer" />
-  //       </div>
-
-  //       <div
-  //         className={`current-text ${
-  //           senderId === currentUser?.uid ? "_sender" : "_receiver"
-  //         }`}
-  //       >
-  //         <span
-  //           style={{
-  //             display: senderId === currentUser?.uid ? "none" : "",
-  //           }}
-  //         >
-  //           {senderName}
-  //         </span>
-  //         {_reference && (
-  //           <div
-  //             className={`_reply ${
-  //               senderId === currentUser?.uid
-  //                 ? "reply-sender"
-  //                 : "reply-receiver"
-  //             }`}
-  //           >
-  //             <div className="_reply-text">
-  //               <span>{_reference?.senderName}</span>
-  //               <p>{_reference?.message}</p>
-  //             </div>
-  //           </div>
-  //         )}
-  //         <div
-  //           className={`text ${
-  //             senderId === currentUser?.uid ? "text-sender" : "text-receiver"
-  //           }`}
-  //         >
-  //           <p>{message}</p>
-  //         </div>
-  //       </div>
-  //       <div className="text-time">
-  //         <span>
-  //           {hour}:{min} {meridiem}
-  //         </span>
-  //       </div>
-  //     </div>
-  //   </>
-  // );
   return (
     <>
       {isNewDate && <span style={style}>{`${date} ${month} ${year}`}</span>}
@@ -197,9 +126,9 @@ const Text = ({
                 <div className="bg-base-100 p-2 rounded-md w-full ">
                   <div className="text-sm text-white">{_reference.senderName}</div>
                   <div className="text-xs">
-                    {message.length > 30
-                      ? message.slice(0, 30) + "..."
-                      : message}
+                    {_reference?.message.length > 30
+                      ? _reference?.message.slice(0, 30) + "..."
+                      : _reference?.message}
                   </div>
                 </div>
               )}
