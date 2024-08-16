@@ -12,7 +12,7 @@
   "dependencies": {
     "@tanstack/react-query": "^5.22.2",
     "@tanstack/react-query-devtools": "^5.24.0",
-    "axios": "^1.6.2",
+    "axios": "^1.7.4",
     "braces": "^3.0.3",
     "firebase": "^10.7.0",
     "postcss-cli": "^11.0.0",
